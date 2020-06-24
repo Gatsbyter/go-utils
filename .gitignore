@@ -1,2 +1,2 @@
 .idea
-go-utils
+service/cmd/sig_svr/sig_svr
