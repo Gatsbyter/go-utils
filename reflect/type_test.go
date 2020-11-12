@@ -7,6 +7,15 @@ import (
 
 type X int
 type Y X
+type Z struct {
+	X
+}
+
+func (X) Xv()  {}
+func (*X) Xp() {}
+
+func (Z) Zv()  {}
+func (*Z) Zp() {}
 
 type User struct {
 	Name string
@@ -18,6 +27,7 @@ type Manager struct {
 	Title string
 }
 
+// 测试type.name 和 type.kind
 func TestTypeOf(t *testing.T) {
 	var a Y = 100
 	printType(a, t)
@@ -28,6 +38,7 @@ func printType(o interface{}, t *testing.T) {
 	t.Logf("name: %s | kind: %s", typ.Name(), typ.Kind())
 }
 
+// 使用reflect构造类型
 func TestMakeType(t *testing.T) {
 	a := reflect.ArrayOf(10, reflect.TypeOf(byte(0)))
 	m := reflect.MapOf(reflect.TypeOf(""), reflect.TypeOf(0))
@@ -35,6 +46,7 @@ func TestMakeType(t *testing.T) {
 	t.Logf("%v | %v | %v", a, m, s)
 }
 
+// 打印类型
 func TestPtrType(t *testing.T) {
 	x := 100
 
@@ -44,6 +56,7 @@ func TestPtrType(t *testing.T) {
 	t.Logf("%v, %v", tp.Elem(), tx == tp.Elem())
 }
 
+// 把结构体里的字段和类型都整出来
 func TestStruct(t *testing.T) {
 	var m Manager
 	typ := reflect.TypeOf(&m)
@@ -67,6 +80,7 @@ func TestStruct(t *testing.T) {
 	}
 }
 
+// 找结构体里的特定字段
 func TestFindField(t *testing.T) {
 	var m Manager
 
@@ -89,4 +103,21 @@ func TestFindField(t *testing.T) {
 	}
 
 	t.Logf("%v, %v", age.Name, age.Type)
+}
+
+// 找对象的方法
+func TestPrintMethod(t *testing.T) {
+	var a Z
+
+	typ := reflect.TypeOf(&a)
+
+	s := []reflect.Type{typ, typ.Elem()}
+
+	for _, typ := range s {
+		t.Logf("%v: %v", typ, typ.NumMethod())
+		for i := 0; i < typ.NumMethod(); i++ {
+			m := typ.Method(i)
+			t.Logf("    %v, %v, %v, %v", m.Name, m.Type, m.Func, m.Index)
+		}
+	}
 }
