@@ -1,2 +1,5 @@
 .idea
+
 service/cmd/sig_svr/sig_svr
+net/tcp/client/client
+net/tcp/server/server
