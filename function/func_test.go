@@ -1,4 +1,4 @@
-package func_learning
+package function
 
 import "testing"
 

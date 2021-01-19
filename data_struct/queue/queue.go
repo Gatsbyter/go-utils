@@ -1,4 +1,4 @@
-package data_struct
+package queue
 
 type Queue struct {
 	q      []interface{}

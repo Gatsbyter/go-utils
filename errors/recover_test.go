@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// 来康康panic和recover吧
+// panic和recover
 func TestRecover(t *testing.T) {
 	defer func() {
 		if err := recover(); err != nil {

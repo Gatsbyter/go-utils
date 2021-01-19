@@ -1,4 +1,4 @@
-package data_struct
+package hash
 
 import (
 	"crypto/md5"
