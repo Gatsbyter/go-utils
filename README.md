@@ -55,8 +55,10 @@
 
 ### tools(工具)
 
+- 检测通道是否关闭 [chan-close](./tools/chan-close)
 - 一键哈希 [hash](./tools/hash)
 - 获取本机公网IP [self-ip](./tools/self-ip)
 - 类型转换工具 [type_convert](./tools/type_convert)
+- 获取当前时间 [tm](./tools/tm)
 
 ### unsafe(底层玩法)
