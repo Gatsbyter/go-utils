@@ -1,4 +1,4 @@
-package ip
+package self_ip
 
 import (
 	"github.com/pkg/errors"

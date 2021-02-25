@@ -1,4 +1,4 @@
-package function
+package L_function
 
 import "testing"
 

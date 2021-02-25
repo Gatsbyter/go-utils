@@ -1,4 +1,4 @@
-package errors
+package L_errors
 
 import (
 	"runtime/debug"
