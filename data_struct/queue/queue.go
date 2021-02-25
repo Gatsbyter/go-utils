@@ -1,8 +1,7 @@
 package queue
 
 type Queue struct {
-	q      []interface{}
-	length int
+	q []interface{}
 }
 
 func NewQueue() *Queue {
@@ -14,22 +13,20 @@ func NewQueue() *Queue {
 
 func (q *Queue) EnQueue(val interface{}) {
 	q.q = append(q.q, val)
-	q.length++
 }
 
 func (q *Queue) Dequeue() interface{} {
 	val := q.q[0]
 	q.q = q.q[1:]
-	q.length--
 	return val
 }
 
 func (q *Queue) Length() int {
-	return q.length
+	return len(q.q)
 }
 
 func (q *Queue) Empty() bool {
-	return q.length == 0
+	return len(q.q) == 0
 }
 
 func (q *Queue) HasValue(val interface{}) bool {

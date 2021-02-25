@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	data := []byte("[这里才是一个完整的数据包]")
 
 	l := len(data)
@@ -26,7 +26,7 @@ func main()  {
 		fmt.Printf("connect failed, err : %v\n", err.Error())
 		return
 	}
-	for i := 0; i <1000; i++ {
+	for i := 0; i < 1000; i++ {
 		_, err = conn.Write(packetBuf.Bytes())
 		if err != nil {
 			fmt.Printf("write failed , err : %v\n", err)

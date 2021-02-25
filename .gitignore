@@ -5,3 +5,5 @@ net/tcp/client/client
 net/tcp/server/server
 command/flag/flag
 command/os/os
+
+io/file/test.*

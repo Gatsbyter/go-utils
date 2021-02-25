@@ -1,38 +1,40 @@
 # go-utils
 
-### command
+### command(获取命令行参数)
 
-- flag
-- os
+- 通过flag库获取命令行参数以及相关操作 [flag](./command/flag/)
+- go原生获取命令行参数 [os](./command/os)
 
-### data_struct
+### data_struct(数据结构实现)
 
-- link_list
-- queue
-- stack
-- tree
+- 链表 [link_list](./data_struct/link_list)
+- 队列 [queue](./data_struct/link_list)
+- 栈 [stack](./data_struct/stack)
+- 树 [tree](./data_struct/tree)
 
-### doc
+### doc(文档)
 
-### errors
+### errors(错误处理)
 
-### function
+### function(函数)
 
-### net
+### net(网络相关)
 
-- tcp
-- ip
+- [tcp](./net/tcp)
+- [ip](./net/ip)
 
-### os
+### os(操作系统相关)
 
-- dir
+- [dir](./os/dir)
 
-### reflect
+### reflect(反射)
 
-### service
+### service(app框架-处理信号)
 
-### tools
+### tools(工具)
 
-- hash
+- [hash](./tools/hash)
 
-### type_convert
+### type_convert(类型转换)
+
+- [interface{}转换](./type_convert/interface%7B%7D)

@@ -11,12 +11,12 @@ import (
 
 type Msg struct {
 	MagicNum [4]byte
-	Len [2]byte
-	Data []byte
+	Len      [2]byte
+	Data     []byte
 }
 
 // 玩一玩粘包
-func main()  {
+func main() {
 	lis, err := net.Listen("tcp", ":4444")
 	if err != nil {
 		panic(err)
@@ -42,9 +42,9 @@ func handle(conn net.Conn) {
 	}()
 
 	log.Printf("new connection with %s", conn.RemoteAddr())
-    result := bytes.NewBuffer(nil)
-    i := 1
-	
+	result := bytes.NewBuffer(nil)
+	i := 1
+
 	for {
 		buf := make([]byte, 65542)
 		n, err := conn.Read(buf)
