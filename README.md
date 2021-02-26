@@ -3,7 +3,7 @@
 ### basic(GoLang基本特性)
 
 - 变量 [var](./basic/L-var)
-- 赋值 [assign](./basic/L-assign)
+- 生命周期 [life](./basic/L-life)
 - 包导入 [import](./basic/L-import)
 - rune基础 [rune](./basic/L-rune)
 - 浮点数探索 [float](./basic/L-float)
