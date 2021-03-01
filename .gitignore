@@ -7,3 +7,5 @@ command/flag/flag
 command/os/os
 
 os/dir/test.*
+
+void_test.go
