@@ -5,20 +5,29 @@ import (
 	"testing"
 )
 
+// ⚠️ copy 是开辟新空间的
+// ⚠️ append 到了cap上限是开辟新空间的 没到就不开 引用相同的底层数组
+// copy函数将返回成功复制的元素的个数，等于两个slice中较小的长度，所以我们不用担心覆盖会超出目标slice的范围。
+
 func TestSlice(t *testing.T) {
 	// slice本质是array元素的引用，官方把slice叫做underlying array
 	// 切片定义
-	var s1 []int // 只有这个slice 是nil 其他都不是
+	var s1 []int // nil
 	s2 := []int{}
 	s3 := make([]int, 0)
+	s4 := []int(nil) // nil
 
 	fmt.Println(s1)
 	fmt.Println(s2)
 	fmt.Println(s3)
+	fmt.Println(s4)
 
 	fmt.Println(s1 == nil)
 	fmt.Println(s2 == nil)
 	fmt.Println(s3 == nil)
+	fmt.Println(s4 == nil)
+
+	// ⚠️ 如果你需要测试一个slice是否是空的，使用len(s) == 0来判断，而不应该用s == nil来判断
 }
 
 func TestSliceInit(t *testing.T) {
@@ -110,4 +119,30 @@ func TestSliceRef(t *testing.T) {
 	s5 = []int{10, 20, 30, 40} // 因为这里等号右边相当于new了一下
 
 	fmt.Println(s6)
+}
+
+// 两个切片引用同一个数组时，修改一个 另外一个也会变
+func TestRef(t *testing.T) {
+	arr := [8]int{1, 2, 3, 4, 5, 6, 7, 8}
+	a1 := arr[2:5]
+	a2 := arr[3:6]
+	fmt.Println(a1)
+	fmt.Println(a2)
+
+	a1[2] = 1000
+
+	fmt.Println(a1)
+	fmt.Println(a2)
+}
+
+func TestReverse(t *testing.T) {
+	a := [...]int{0, 1, 2, 3, 4, 5}
+	reverse(a[:])
+	fmt.Println(a)
+}
+
+func reverse(s []int) {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
 }
