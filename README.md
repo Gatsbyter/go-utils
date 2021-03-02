@@ -4,8 +4,6 @@
 
 - 变量 [var](./basic/L-var)
 - 生命周期 [life](./basic/L-life)
-- 包导入 [import](./basic/L-import)
-- rune基础 [rune](./basic/L-rune)
 - 浮点数探索 [float](./basic/L-float)
 - 字符串基础 [string](./basic/L-string)
 - iota基础 [iota](./basic/L-iota)
