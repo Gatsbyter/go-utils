@@ -5,6 +5,9 @@ import (
 	"testing"
 )
 
+// ⚠️defer 是FILO的
+// defer 调用非常损耗性能
+
 // panic和recover
 func TestRecover(t *testing.T) {
 	defer func() {
