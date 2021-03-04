@@ -8,6 +8,8 @@ import (
 	"time"
 )
 
+// ⚠️ 有一个不错的工具 叫nc
+
 func TestTcp(t *testing.T) {
 	localPort := 56580
 
