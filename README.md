@@ -59,5 +59,6 @@
 - 获取本机公网IP [self-ip](./tools/self-ip)
 - 类型转换工具 [type_convert](./tools/type_convert)
 - 获取当前时间 [tm](./tools/tm)
+- 基准测试 [benchmark](./tools/benchmark)
 
 ### unsafe(底层玩法)
