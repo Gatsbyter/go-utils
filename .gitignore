@@ -6,6 +6,6 @@ net/sticky_pkg/server/server
 command/flag/flag
 command/os/os
 
-os/dir/test.*
+os/L-dir/test.*
 
 void_test.go

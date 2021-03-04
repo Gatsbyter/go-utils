@@ -41,9 +41,10 @@
 
 ### os(操作系统相关)
 
-- 目录&文件相关 [dir](./os/dir)
-- 环境变量相关 [env](./os/env)
-- 执行程序 [exec](./os/exec)
+- 目录&文件相关 [dir](./os/L-dir)
+- 环境变量相关 [env](./os/L-env)
+- 执行程序 [exec](./os/L-exec)
+- 基于共享变量的并发 [sync](./os/L-sync)
 
 ### reflect(反射)
 
