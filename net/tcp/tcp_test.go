@@ -10,6 +10,7 @@ import (
 
 // ⚠️ 有一个不错的工具 叫nc
 
+// 一个简单的指定本地端口的telnet工具
 func TestTcp(t *testing.T) {
 	localPort := 56580
 
