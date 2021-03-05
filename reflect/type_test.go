@@ -65,6 +65,7 @@ func TestStruct(t *testing.T) {
 		typ = typ.Elem()
 	}
 
+	// 打印结构体有多少个字段
 	t.Logf("num field: %v", typ.NumField())
 
 	for i := 0; i < typ.NumField(); i++ {
@@ -97,11 +98,6 @@ func TestFindField(t *testing.T) {
 	// 这玩意就是找多级查询，比如0, 1就是根结构的第一个结构里的第二个字段
 	// {0, 1}就是age, {1}就是title, {0, 0}是name
 	age := typ.FieldByIndex([]int{0, 1})
-	if !ok {
-		t.Errorf("cannot find age")
-		return
-	}
-
 	t.Logf("%v, %v", age.Name, age.Type)
 }
 
@@ -111,6 +107,8 @@ func TestPrintMethod(t *testing.T) {
 
 	typ := reflect.TypeOf(&a)
 
+	// 对值和指针分别查找
+	// 因为方法分为传值和传指针
 	s := []reflect.Type{typ, typ.Elem()}
 
 	for _, typ := range s {
