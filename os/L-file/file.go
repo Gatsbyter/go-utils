@@ -1,4 +1,4 @@
-package L_dir
+package L_file
 
 func init() {
 
