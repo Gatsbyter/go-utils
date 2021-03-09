@@ -50,7 +50,7 @@ func sticky() {
 		fmt.Printf("connect failed, err : %v\n", err.Error())
 		return
 	}
-	for i := 0; i <1000; i++ {
+	for i := 0; i < 1000; i++ {
 		_, err = conn.Write(data)
 		if err != nil {
 			fmt.Printf("write failed , err : %v\n", err)

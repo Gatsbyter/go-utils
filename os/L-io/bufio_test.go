@@ -44,7 +44,7 @@ func TestReadBytes(t *testing.T) {
 func TestReadSlice(t *testing.T) {
 	reader := bufio.NewReader(strings.NewReader("http://studygolang.com. \nIt is the home of gophers"))
 
-	line, _ := reader.ReadSlice('\n')    // 把这里和下面换成ReadString看看
+	line, _ := reader.ReadSlice('\n') // 把这里和下面换成ReadString看看
 	fmt.Printf("the line:%s\n", line)
 
 	// 这里可以换上任意的 bufio 的 Read/Write 操作
@@ -58,7 +58,7 @@ func TestReadSlice(t *testing.T) {
 // 当且仅当返回的结果（line）没有以界定符结束的时候，ReadSlice 返回err != nil
 // 也就是说，如果ReadSlice 返回的结果 line 不是以界定符 delim 结尾, 那么返回的 err也一定不等于 nil（可能是bufio.ErrBufferFull或io.EOF）
 func TestFullBuf(t *testing.T) {
-	reader := bufio.NewReaderSize(strings.NewReader("http://studygolang.com"),16)
+	reader := bufio.NewReaderSize(strings.NewReader("http://studygolang.com"), 16)
 
 	line, err := reader.ReadSlice('\n')
 	fmt.Printf("line:%s\terror:%s\n", line, err)
@@ -102,7 +102,6 @@ func TestPeek(t *testing.T) {
 	fmt.Printf("%s\n", line2)
 }
 
-
 func TestWriteBuf(t *testing.T) {
 	file, err := os.Create("writer.txt")
 	if err != nil {
@@ -123,18 +122,5 @@ func TestWriteBuf(t *testing.T) {
 	fmt.Println(n, writer.Buffered(), writer.Size(), writer.Available())
 	// 该方法将缓存中的所有数据写入底层的 io.Writer 对象中。
 	// 使用 bufio.Writer 时，在所有的 Write 操作完成之后，应该调用 Flush 方法使得缓存都写入 io.Writer 对象中
-	writer.Flush()  // 注释掉这行 看看会出现什么问题
+	writer.Flush() // 注释掉这行 看看会出现什么问题
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

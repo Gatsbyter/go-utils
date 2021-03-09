@@ -52,8 +52,7 @@ func (p *Person) Format(f fmt.State, c rune) {
 //
 // 一般地，我们不需要实现 Formatter 接口。如果对 Formatter 接口的实现感兴趣，可以看看标准库 math/big 包中 Int 类型的 Formatter 接口实现。
 
-
 // 该接口定义了类型的Go语法格式。用于打印(Printf)格式化占位符为 %#v 的值。
 func (p *Person) GoString() string {
-	return "&Person{Name is "+p.Name+", Age is "+strconv.Itoa(p.Age)+", Sex is "+strconv.Itoa(p.Sex)+"}"
+	return "&Person{Name is " + p.Name + ", Age is " + strconv.Itoa(p.Age) + ", Sex is " + strconv.Itoa(p.Sex) + "}"
 }

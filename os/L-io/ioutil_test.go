@@ -43,7 +43,7 @@ func TestReadDir(t *testing.T) {
 // ReadFile 从 filename 指定的文件中读取数据并返回文件的内容。
 // 成功的调用返回的err 为 nil 而非 EOF。
 // 因为本函数定义为读取整个文件，它不会将读取返回的 EOF 视为应报告的错误。(同 ReadAll )
-// 
+//
 // ReadFile 会先判断文件的大小，给 bytes.Buffer 一个预定义容量，避免额外分配内存。
 func TestReadFile(t *testing.T) {
 	data, err := ioutil.ReadFile("writeAt.txt")
@@ -84,7 +84,7 @@ func TestTempDir(t *testing.T) {
 	}
 }
 
-func TestTempFile(t *testing.T)  {
+func TestTempFile(t *testing.T) {
 	file, err := ioutil.TempFile("", "go-utils-file")
 	if err != nil {
 		panic(err)

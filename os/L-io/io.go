@@ -14,7 +14,7 @@ import "io"
 // mime/multipart.Part 实现了 io.Reader
 // net/conn 分别实现了 io.Reader 和 io.Writer(Conn接口定义了Read/Write)
 
-type IO struct {}
+type IO struct{}
 
 // Read 将 len(p) 个字节读取到 p 中。 数据从 IO -> p
 // 它返回读取的字节数 n (0 <= n <= len(p)) 和 任何遇到的错误。

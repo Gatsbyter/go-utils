@@ -21,14 +21,14 @@ func TestPath(t *testing.T) {
 	path2 := "abc"
 	path3 := ""
 
-	fmt.Println(filepath.Base(path1))   // 返回文件
-	fmt.Println(filepath.Dir(path1))    // 返回路径
+	fmt.Println(filepath.Base(path1)) // 返回文件
+	fmt.Println(filepath.Dir(path1))  // 返回路径
 
-	fmt.Println(filepath.Base(path2))   // abc
-	fmt.Println(filepath.Dir(path2))    // .
+	fmt.Println(filepath.Base(path2)) // abc
+	fmt.Println(filepath.Dir(path2))  // .
 
-	fmt.Println(filepath.Base(path3))    // .
-	fmt.Println(filepath.Dir(path3))    // .
+	fmt.Println(filepath.Base(path3)) // .
+	fmt.Println(filepath.Dir(path3))  // .
 }
 
 func TestAbs(t *testing.T) {

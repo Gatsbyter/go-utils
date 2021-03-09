@@ -14,8 +14,8 @@ func TestScanner(t *testing.T) {
 	// ⚠️ 这个要用main测试 别用test
 	scanner := bufio.NewScanner(os.Stdin) // 像这些里面都定义了 SplitFunc 定义后就可以调Scan 可以手动覆盖(用Split
 
-	for scanner.Scan() {   // Scan 方法 该方法好比 iterator 中的 Next 方法，它用于将 Scanner 获取下一个 token
-		fmt.Println(scanner.Text())  // Bytes 和 Text 方法 这两个方法的行为一致，都是返回最近的 token，该方法应该在 Scan 调用后调用
+	for scanner.Scan() { // Scan 方法 该方法好比 iterator 中的 Next 方法，它用于将 Scanner 获取下一个 token
+		fmt.Println(scanner.Text()) // Bytes 和 Text 方法 这两个方法的行为一致，都是返回最近的 token，该方法应该在 Scan 调用后调用
 	}
 
 	if err := scanner.Err(); err != nil {

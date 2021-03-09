@@ -41,7 +41,7 @@ func TestReadFrom(t *testing.T) {
 }
 
 func TestWrite(t *testing.T) {
-	fmt.Println()  // 跳转进去看看
+	fmt.Println() // 跳转进去看看
 }
 
 func TestReadAt(t *testing.T) {
