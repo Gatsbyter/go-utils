@@ -48,10 +48,13 @@
 
 ### os(操作系统相关)
 
-- 目录&文件相关 [dir](./os/L-dir)
+- 文件相关 [file](os/L-file)
+- 路径相关 [path](os/L-path)
 - 环境变量相关 [env](./os/L-env)
 - 执行程序 [exec](./os/L-exec)
 - 基于共享变量的并发 [sync](./os/L-sync)
+- 输入输出 [io](./os/L-io)
+- 运行时 [runtime](./os/L-runtime)
 
 ### reflect(反射)
 

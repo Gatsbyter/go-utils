@@ -6,6 +6,8 @@ net/sticky_pkg/server/server
 command/flag/flag
 command/os/os
 
-os/L-dir/test.*
+os/L-file/test.*
+os/L-io/*.txt
 
-void_test.go
+go-utils
+main.go
