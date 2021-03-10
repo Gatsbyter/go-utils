@@ -9,5 +9,7 @@ command/os/os
 os/L-file/test.*
 os/L-io/*.txt
 
+sdk/L-context/cmd/cmd
+
 go-utils
 main.go

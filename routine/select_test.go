@@ -36,6 +36,7 @@ func TestSelect(t *testing.T) {
 	time.Sleep(time.Second)
 
 	// 如果多个case同时就绪时，select会随机地选择一个执行，这样来保证每一个channel都有平等的被select的机会
+	// 如果没有default select会阻塞知道有一个分支返回
 	for {
 		select {
 		case <-ch1:
