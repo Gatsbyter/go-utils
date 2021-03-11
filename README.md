@@ -72,6 +72,14 @@
 - select测试 [select](./routine/select_test.go)
 - routine泄漏 [leak](./routine/leak_test.go)
 
+### sdk(标准库)
+
+- 二进制 [binary](./sdk/L-binary)
+- 字节操作 [bytes](./sdk/L-bytes)
+- 上下文 [context](./sdk/L-context)
+- 字符串 [string](./sdk/L-string)
+- 时间 [time](./sdk/L-time)
+
 ### service(app框架-处理信号)
 
 ### tools(工具)
