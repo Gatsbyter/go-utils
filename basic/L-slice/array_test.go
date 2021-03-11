@@ -48,6 +48,7 @@ func TestInitArr(t *testing.T) {
 	)
 
 	// 可以这样初始化
+	// ⚠️ 三点初始化 是数组 不是slice
 	symbol := [...]string{USD: "$", EUR: "€", GBP: "￡", RMB: "￥"}
 
 	fmt.Println(RMB, symbol[RMB])
@@ -65,7 +66,6 @@ func TestCompare(t *testing.T) {
 	fmt.Println(a == b, a == c, b == c) // "true false false"
 	// d := [3]int{1, 2}
 	// 直接编译错误 [2]int == [3]int
-	// fmt.Println(a == d)
 
 	// 和数组不同的是，slice之间不能比较
 	// 因此我们不能使用==操作符来判断两个slice是否含有全部相等元素。

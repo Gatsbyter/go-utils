@@ -70,4 +70,9 @@ func TestPrint(t *testing.T) {
 	fmt.Printf("%d %[1]c %[1]q\n", ascii)   // "97 a 'a'"
 	fmt.Printf("%d %[1]c %[1]q\n", unicode) // "22269 国 '国'"
 	fmt.Printf("%d %[1]q\n", newline)       // "10 '\n'"
+
+	/*----------------------------- 占位打印 ---------------------------------------*/
+
+	fmt.Printf("%8d\n", 123)  //  "     123"
+	fmt.Printf("%08d\n", 123) //  "00000123"
 }

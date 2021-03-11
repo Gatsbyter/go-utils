@@ -9,6 +9,7 @@ import (
 // defer 调用非常损耗性能
 
 // panic和recover
+// panic后 会一个个执行defer 没recover 最后打印panic&堆栈
 func TestRecover(t *testing.T) {
 	defer func() {
 		if err := recover(); err != nil {

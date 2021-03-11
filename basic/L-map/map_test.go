@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// map可以len 不能cap
 func TestMap(t *testing.T) {
 	// 初始化的方法
 	var m1 map[string]int // nil

@@ -36,14 +36,14 @@ func TestRune(t *testing.T) {
 	//s := "プログラム"
 	s := "hello, 世界"
 	// 在第一个Printf中的% x参数用于在每个十六进制数字前插入一个空格
-	fmt.Printf("% x\n", s) // "e3 83 97 e3 83 ad e3 82 b0 e3 83 a9 e3 83 a0"
+	fmt.Printf("% x\n", s) // 68 65 6c 6c 6f 2c 20 e4 b8 96 e7 95 8c
 	// string 转 rune 切片
 	r := []rune(s)
-	fmt.Printf("%x\n", r) // "[30d7 30ed 30b0 30e9 30e0]"
+	fmt.Printf("%x\n", r) // [68 65 6c 6c 6f 2c 20 4e16 754c]
 	// rune切片 转 string
 	fmt.Println(string(r))
 	// 将一个整数转型为字符串意思是生成以只包含对应Unicode码点字符的UTF8字符串
-	fmt.Println(string(rune(65)))     // "A", not "65"
+	fmt.Println(string(rune(65)))     // "A"
 	fmt.Println(string(rune(0x4eac))) // "京"
 	// 如果对应码点的字符是无效的，则用\uFFFD无效字符作为替换
 	fmt.Println(string(rune(1234567))) // "�"
@@ -55,7 +55,7 @@ func TestRune(t *testing.T) {
 //strings包提供了许多如字符串的查询、替换、比较、截断、拆分和合并等功能。
 //
 //bytes包也提供了很多类似功能的函数，但是针对和字符串有着相同结构的[]byte类型。
-//因为字符串是只读的，因此逐步构建字符串会导致很多分配和复制。
+//⚠️因为字符串是只读的，因此逐步构建字符串会导致很多分配和复制。
 //在这种情况下，使用bytes.Buffer类型将会更有效，稍后我们将展示。
 //
 //strconv包提供了布尔型、整型数、浮点数和对应字符串的相互转换，还提供了双引号转义相关的转换。

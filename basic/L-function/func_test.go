@@ -29,6 +29,7 @@ func TestNilFunc(t *testing.T) {
 
 // ⚠️函数值之间是不可比较的，也不能用函数值作为map的key
 
+// 一个小tool
 func TestMapFunc(t *testing.T) {
 	fmt.Println(strings.Map(add1, "HAL-9000")) // "IBM.:111"
 	fmt.Println(strings.Map(add1, "VMS"))      // "WNT"
