@@ -68,6 +68,7 @@ func (i *IO) ReadAt(p []byte, off int64) (n int, err error) {
 // 若被写区域没有重叠，可对相同的目标并行执行 WriteAt 调用。
 func (i *IO) WriteAt(p []byte, off int64) (n int, err error) {
 	return 0, err
+
 }
 
 // ReadFrom 从 r 中读取数据，直到 EOF 或发生错误。其返回值 n 为读取的字节数。

@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// 调用time.Sleep: https://jishuin.proginn.com/p/763bfbd2f770
+
 func TestTime(t *testing.T) {
 	// Time类里面就三个 纳秒 秒 时区
 

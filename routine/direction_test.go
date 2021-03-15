@@ -15,7 +15,7 @@ import (
 
 // 因为close操作只用于断言不再向channel发送新的数据，
 // 所以只有在发送者所在的goroutine才会调用close函数，
-// 因此对一个只接收的channel调用close将是一个编译错误
+// ⚠️因此对一个只接收的channel调用close将是一个编译错误
 func TestDirect(t *testing.T) {
 	naturals := make(chan int)
 	squares := make(chan int)

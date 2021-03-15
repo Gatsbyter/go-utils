@@ -8,6 +8,9 @@ import (
 	"testing"
 )
 
+// Create()  ==>  OpenFile(name, O_RDWR|O_CREATE|O_TRUNC, 0666)
+// Open()  ==>  OpenFile(name, O_RDONLY, 0)
+
 func TestCreate(t *testing.T) {
 	file, err := os.Create("test.log")
 	if err != nil {
@@ -48,6 +51,7 @@ func TestAppend(t *testing.T) {
 	}
 }
 
+// 截断文件
 func TestTruncate(t *testing.T) {
 	err := os.Truncate("test.log", 7)
 	if err != nil {
@@ -89,6 +93,13 @@ func TestCopy(t *testing.T) {
 	}
 
 	t.Logf("Copied %d bytes.", bytesWritten)
+}
+
+func TestRemove(t *testing.T) {
+	err := os.Remove("test_copy.log")
+	if err != nil {
+		panic(err)
+	}
 }
 
 func TestSeek(t *testing.T) {
