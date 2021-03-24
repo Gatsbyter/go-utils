@@ -12,8 +12,8 @@ func Test11(t *testing.T) {
 	ch2 := make(chan struct{})
 
 	go func() {
-		for i := 1; ; i+=2 {
-			<- ch2
+		for i := 1; ; i += 2 {
+			<-ch2
 			fmt.Printf("%d", i)
 			fmt.Printf("%d", i+1)
 			ch1 <- struct{}{}
@@ -21,8 +21,8 @@ func Test11(t *testing.T) {
 	}()
 
 	go func() {
-		for i := 65; i <= 90; i+=2 {
-			<- ch1
+		for i := 65; i <= 90; i += 2 {
+			<-ch1
 			fmt.Printf("%c", rune(i))
 			fmt.Printf("%c", rune(i+1))
 			ch2 <- struct{}{}

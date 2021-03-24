@@ -7,31 +7,28 @@ import (
 
 func Test11(t *testing.T) {
 
-
 }
 
 type Item struct {
 	value int
-	ele *list.Element
+	ele   *list.Element
 }
 
 type LRUCache struct {
-	l *list.List
-	m map[int]Item
+	l   *list.List
+	m   map[int]Item
 	cap int
 }
 
-
 func Constructor(capacity int) LRUCache {
 	l := LRUCache{
-		l: list.New(),
-		m: make(map[int]Item),
+		l:   list.New(),
+		m:   make(map[int]Item),
 		cap: capacity,
 	}
 
 	return l
 }
-
 
 func (l *LRUCache) Get(key int) int {
 	val, ok := l.m[key]
