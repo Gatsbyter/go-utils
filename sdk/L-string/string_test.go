@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// 字符串切割
 func TestString(t *testing.T) {
 	s1 := strings.Fields("hello world")
 	p(s1)

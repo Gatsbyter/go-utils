@@ -8,4 +8,4 @@ package tree
 // B树
 // B+树
 // B*树
-// Trie树
+// Trie树 - 字典树 - 之前敏感词匹配就是这玩意

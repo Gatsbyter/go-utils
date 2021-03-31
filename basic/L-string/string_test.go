@@ -6,6 +6,8 @@ import (
 	"unicode/utf8"
 )
 
+// len一个字符串 得到的是char[]的长度
+// range一个字符串 次数是rune[]的长度
 func TestString(t *testing.T) {
 	s := "hello, 世界"
 	fmt.Println(len(s))
